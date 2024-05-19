@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center><h1> Find Factorial of Any Number</h1> </center>
+    
+    Enter a number:-
+    <input type="text" id="number"> <br>
+    <input type="button" id="show" value="result">
+    <script>
+        let number=document.getElementById("number");
+        let result=document.getElementById("show");
+        result.addEventListener("click",function()
+    {
+        let fact=1;
+        for(let i=1;i<=number.value;i++)
+        {
+            fact=fact*i;
+        }
+        document.write(fact);
+    })
+    </script>
+</body>
+</html>

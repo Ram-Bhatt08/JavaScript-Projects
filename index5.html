@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form
+        {
+            border: 2px solid black;
+            width: fit-content;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <form>
+    Enter a number:- <br>
+    <input type="text" id="number"> <br>
+    <input type="button" id="btn" value="check"> <br>
+    <input type="text" id="result"> <br>
+</form>
+</center>
+    <script>
+        let number=document.getElementById("number");
+        let button=document.getElementById("btn");
+        let result=document.getElementById("result");
+
+        function check()
+            {
+                let n=parseFloat(number.value);
+                if(n%2==0)
+                {
+                    result.value=n+" is even ";
+                }
+                else {
+                    result.value=n+" is odd";
+                }
+            }
+            button.onclick=check;
+    </script>
+</body>
+</html>

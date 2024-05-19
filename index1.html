@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        Enter a first Number:-
+        <input type="text" id="first"> <br>
+        Enter a second number:- 
+        <input type="text" id="second"> <br>
+        <input type="button" id="show" value="result">
+    </form>
+    <script>
+        let first=document.getElementById("first");
+        let second=document.getElementById("second");
+        let result=document.getElementById("show");
+        result.addEventListener("click", function()
+            {
+            let sum=parseFloat(first.value)+parseFloat(second.value);
+            document.write("The sum of the two number is " + sum);
+            }
+        )
+    </script>
+</body>
+</html>

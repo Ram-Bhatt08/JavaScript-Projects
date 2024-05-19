@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            border: 2px solid black;
+            width: fit-content;
+            margin: 5px;
+            padding: 10px;
+        }
+        #screen {
+            width:250px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        Calculate Simple Number:- <br>
+
+        <input type="text" placeholder="Display Result" id="screen"> <br>
+        <form>
+        Enter the first Number:- <br> 
+        <input type="text" id="first"> <br>
+        Enter the second number:- <br>
+        <input type="text" id="second"> <br>
+        Choose the operation:- <br>
+        <input type="button" value="+" id="sum">
+        <input type="button" value="-" id="sub">
+        <input type="button" value="*" id="mul">
+        <input type="button" value="/" id="div">
+     <!-- <input type="button" value="result" id="show"> --> 
+        
+    </form>
+    </center>
+    <script>
+let screen=document.getElementById("screen");
+let first=document.getElementById("first");
+let second=document.getElementById("second");
+let sum=document.getElementById("sum");
+let sub=document.getElementById("sub");
+let mul=document.getElementById("mul");
+let div=document.getElementById("div");
+//let result=document.getElementById("show");
+sum.addEventListener("click" ,function()
+{
+    let sum=parseFloat(first.value)+parseFloat(second.value);
+    screen.value="The sum of the two number is:- " +sum ;
+})
+sub.addEventListener("click" ,function()
+{
+    let sub=parseFloat(first.value)-parseFloat(second.value);
+    screen.value="The subtraction of the two number is:- " +sub;
+})
+mul.addEventListener("click" ,function()
+{
+    let mul=parseFloat(first.value)*parseFloat(second.value);
+    screen.value="The multiplication of the two number is:- " +mul;
+})
+div.addEventListener("click" ,function()
+{
+    let div=parseFloat(first.value)/parseFloat(second.value);
+    screen.value="The division of the two number is:- " +div;
+})
+    </script>
+</body>
+</html>

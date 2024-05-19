@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            border: 2px solid black;
+            margin: 30px;
+            padding: 10px;
+            width: fit-content;
+        }
+        #btn {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        To check profit or loss:-
+        <form>
+            Enter the amount at which you buy product:-  <br>
+            <input type="text" id="buy"> <br>
+            Enter the amount at which sell the product:- <br>
+            <input type="text" id="sell"> <br>
+            <input type="button" id="btn" value="Calculate"> <br>
+            Profit or Loss:- <br>
+            <input type="text" id="result">
+        </form>
+    </center>
+    <script>
+        let cp=document.getElementById("buy");
+        let sp=document.getElementById("sell");
+        let result=document.getElementById("result");
+        let btn=document.getElementById("btn");
+
+btn.addEventListener("click",function()
+{
+    let cost=parseFloat(cp.value);
+    let selling=parseFloat(sp.value);
+    if(sp>cp)
+    {
+        let profit=selling-cost;
+        result.value="Profit is:- " +profit;
+    }
+    else
+    {
+        let loss=cost-selling;
+        result.value="Loss is:- " +loss;
+    }
+})
+    </script>
+</body>
+</html>
